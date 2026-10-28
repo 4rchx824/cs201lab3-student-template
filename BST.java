@@ -1,5 +1,3 @@
-package datastructures;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,21 +56,24 @@ public class BST {
      }
 
      private void inorder(Node node, List<Integer> out) {
-          if (node == null) return;
+          if (node == null)
+               return;
           inorder(node.left, out);
           out.add(node.value);
           inorder(node.right, out);
      }
 
      private void preorder(Node node, List<Integer> out) {
-          if (node == null) return;
+          if (node == null)
+               return;
           out.add(node.value);
           preorder(node.left, out);
           preorder(node.right, out);
      }
 
      private void postorder(Node node, List<Integer> out) {
-          if (node == null) return;
+          if (node == null)
+               return;
           postorder(node.left, out);
           postorder(node.right, out);
           out.add(node.value);
